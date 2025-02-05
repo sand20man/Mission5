@@ -2,7 +2,141 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+      }
+      
+      .hero {
+        height: 400px;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/background.jpeg');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 4em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-around;
+        background: #f8f9fa;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+      }
+
+      .stat {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2em;
+        font-weight: bold;
+        color: #dc143c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Discover Japan<br>日本を発見しよう</h1>
+    </div>
+
+    <div class="content">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">47</div>
+          <div>Prefectures</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">125M</div>
+          <div>Population</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">6,852</div>
+          <div>Islands</div>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="img/fuji.jpeg" alt="Mount Fuji">
+          <div class="card-content">
+            <h2>Mount Fuji</h2>
+            <p>Mount Fuji, Japan's most sacred mountain, rises 3,776 meters above sea level. This active stratovolcano last erupted in 1707 and has been a UNESCO World 
+              Heritage site since 2013. Its perfect conical shape, snow-capped peak, and cultural significance have made it a symbol of Japan and a popular destination for 
+              climbers and photographers alike. The mountain is visible from Tokyo on clear days and attracts over 200,000 climbers annually during its summer climbing season.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/tokyo.jpeg" alt="Tokyo">
+          <div class="card-content">
+            <h2>Tokyo</h2>
+            <p>Tokyo, Japan's bustling capital, seamlessly blends ultramodern and traditional elements. Home to over 37 million people in its metropolitan area, it features 
+              cutting-edge technology, world-class dining, and vibrant pop culture. From the historic Senso-ji Temple to the futuristic Shibuya Crossing, Tokyo offers 
+              countless attractions. The city's efficient train system, diverse neighborhoods like Harajuku and Akihabara, and status as the world's largest urban economy 
+              make it a global powerhouse of culture and commerce.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/kyoto.jpeg" alt="Kyoto">
+          <div class="card-content">
+            <h2>Kyoto</h2>
+            <p>Kyoto, Japan's cultural heart and former imperial card-contentapital, preserves over 1,000 years of history. The city houses 17 UNESCO World Heritage sites, 
+              including the golden Kinkaku-ji pavilion and the serene Ryoan-ji rock garden. Famous for its traditional arts, tea ceremonies, and geisha culture in the Gion 
+              district, Kyoto offers visitors a glimpse into Japan's rich past. The city's seasonal beauty peaks during cherry blossom season and autumn foliage, drawing 
+              millions of visitors to its temples, shrines, and traditional gardens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
